@@ -1,0 +1,15 @@
+# Global owner — required review on all PRs
+* @brahimcontact64
+
+# SaaS platform
+/apps/saas/ @brahimcontact64
+
+# WordPress plugin
+/wordpress-plugin/ @brahimcontact64
+
+# Database migrations — require careful review
+/supabase/migrations/ @brahimcontact64
+
+# Security-sensitive files
+/.env.example @brahimcontact64
+/docs/Security.md @brahimcontact64

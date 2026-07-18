@@ -1,0 +1,29 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true,
+    "allowArbitraryExtensions": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next-clean/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "scripts/real-production-load-test.ts",
+    "tests/real-production-load-test.test.ts",
+    "tests/load-test-stress.test.ts"
+  ]
+}

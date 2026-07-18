@@ -1,0 +1,8 @@
+node_modules/
+.next/
+.next-clean/
+dist/
+*.min.js
+*.min.css
+package-lock.json
+supabase/.temp/

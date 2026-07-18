@@ -1,0 +1,65 @@
+# Dependencies
+node_modules/
+
+# Next.js build outputs
+.next/
+.next-clean/
+.next-build*/
+.next-fresh/
+.next-verify*/
+
+# Env files — NEVER commit these
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Debug & temporary files
+.tmp/
+.tmp-*
+tmp-*
+tmp_*
+
+# OS
+.DS_Store
+*.swp
+Thumbs.db
+
+# Editor state (settings + extensions are tracked intentionally)
+.idea/
+*.iml
+
+# Build artifacts and release staging
+dist/
+_dzfs_*
+_final_release_stage_*/
+_package_stage_*/
+_verify_*/
+
+# TypeScript incremental build cache
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# Supabase CLI connection state (auto-generated, not for version control)
+supabase/.temp/
+
+# Plugin zip archives (built on demand via scripts/package-plugin.sh)
+*.zip
+
+# WordPress runtime / debug files (never committed)
+activate_*.php
+check-order*.php
+runtime_*.php
+tmp-*.php
+rebuild_zip*.ps1
+test-checkout*.ps1
+
+# Old reports (historical, not for version control)
+reports/
+apps/reports/

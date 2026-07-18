@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="DZ Fraud Shield">
+  <defs>
+    <linearGradient id="ga" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B3D2E"/>
+      <stop offset="70%" stop-color="#183C31"/>
+      <stop offset="100%" stop-color="#D6A74C"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="38" fill="url(#ga)"/>
+  <text x="90" y="106" text-anchor="middle" font-size="58" font-family="Arial, sans-serif" font-weight="800" letter-spacing="-5" fill="#ffffff">DZ</text>
+</svg>

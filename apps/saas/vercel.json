@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/api/v1/jobs/delivery-sync",
+      "schedule": "*/15 * * * *"
+    },
+    {
+      "path": "/api/v1/jobs/process-background",
+      "schedule": "* * * * *"
+    }
+  ]
+}

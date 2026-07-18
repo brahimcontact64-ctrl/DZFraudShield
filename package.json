@@ -1,0 +1,33 @@
+{
+  "name": "zaki",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zaki — Fraud prevention platform for Algerian WooCommerce merchants",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w zaki-saas",
+    "build": "npm run build -w zaki-saas",
+    "start": "npm run start -w zaki-saas",
+    "lint": "npm run lint -w zaki-saas",
+    "lint:fix": "npm run lint:fix -w zaki-saas",
+    "typecheck": "npm run typecheck -w zaki-saas",
+    "test": "npm run test -w zaki-saas",
+    "test:coverage": "npm run test:coverage -w zaki-saas",
+    "db:push": "supabase db push",
+    "plugin:package": "bash scripts/package-plugin.sh",
+    "ops:audit-network": "node apps/saas/scripts/audit-network-automation-readonly.mjs",
+    "ops:verify-production": "node apps/saas/scripts/verify-production-launch-readiness.mjs",
+    "ops:backfill-outcomes": "node apps/saas/scripts/backfill-outcome-reasons.mjs",
+    "ops:rebuild-reputation": "node apps/saas/scripts/rebuild-reputation.mjs",
+    "ops:audit-migrations": "node apps/saas/scripts/launch-stabilization-migration-audit.mjs"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}

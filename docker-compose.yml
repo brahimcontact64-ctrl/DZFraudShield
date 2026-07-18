@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+  saas:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: zaki-saas
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_SUPABASE_URL=${NEXT_PUBLIC_SUPABASE_URL}
+      - NEXT_PUBLIC_SUPABASE_ANON_KEY=${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - API_KEY_SIGNING_SECRET=${API_KEY_SIGNING_SECRET}
+      - PHONE_HASH_SECRET=${PHONE_HASH_SECRET}
+      - DELIVERY_ACCOUNT_ENCRYPTION_KEY=${DELIVERY_ACCOUNT_ENCRYPTION_KEY}
+      - CRON_SECRET=${CRON_SECRET}
+      - DELIVERY_WEBHOOK_SECRET=${DELIVERY_WEBHOOK_SECRET}
+      - BACKGROUND_JOBS_SECRET=${BACKGROUND_JOBS_SECRET}
+      - VAPID_PUBLIC_KEY=${VAPID_PUBLIC_KEY}
+      - VAPID_PRIVATE_KEY=${VAPID_PRIVATE_KEY}
+      - ADMIN_NETWORK_USER=${ADMIN_NETWORK_USER}
+      - ADMIN_NETWORK_PASSWORD=${ADMIN_NETWORK_PASSWORD}
+      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/api/v1/internal/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+
+networks:
+  default:
+    name: zaki-network
