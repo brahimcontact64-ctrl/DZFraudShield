@@ -54,9 +54,18 @@ Vercel authenticates cron invocations with `Authorization: Bearer <CRON_SECRET>`
 | Framework preset | Next.js |
 | Root directory | `apps/saas` |
 | Build command | `npm run build` |
-| Output directory | `.next-clean` (matches `next.config.mjs` distDir) |
+| Output directory | *(leave default — do not override)* |
 | Install command | `npm install` |
 | Node.js version | 20.x |
+
+> **Do not set a custom `distDir`** in `next.config.mjs` and do not override
+> "Output Directory" in the Vercel dashboard. Vercel's Next.js Runtime always
+> looks for build output in `.next` and ignores a custom Output Directory
+> setting for the Next.js framework preset — a non-default `distDir` will
+> build successfully but fail at deploy time with "output directory '.next'
+> was not found". The Docker build (`docker/Dockerfile`) uses its own
+> `BUILD_STANDALONE=1` standalone output under `.next/standalone`, which is
+> unaffected by this.
 
 ---
 

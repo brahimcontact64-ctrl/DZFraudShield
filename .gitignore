@@ -3,7 +3,6 @@ node_modules/
 
 # Next.js build outputs
 .next/
-.next-clean/
 .next-build*/
 .next-fresh/
 .next-verify*/

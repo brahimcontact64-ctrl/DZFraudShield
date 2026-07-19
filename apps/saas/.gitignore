@@ -3,7 +3,6 @@ node_modules/
 
 # Next.js build output
 .next/
-.next-clean/
 
 # Env files
 .env
